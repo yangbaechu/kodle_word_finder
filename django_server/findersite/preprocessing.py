@@ -44,7 +44,7 @@ for i, row in nouns.iterrows():
 is_six_letter = nouns.word_pieces.str.len() == 6
 six_letter_nouns = nouns.loc[is_six_letter,:].copy()
 final_words = six_letter_nouns.drop_duplicates(['word']).copy()
-final_words.fillna(1000, inplace=True)
+final_words.fillna(3000, inplace=True)
 
 #df to model
 word_records = final_words.to_dict('records')

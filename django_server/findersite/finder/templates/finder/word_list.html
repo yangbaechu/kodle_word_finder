@@ -1,0 +1,9 @@
+{% if word_list %}
+    <ul>
+    {% for word in word_list %}
+    <li>{{ word.word_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Words are available.</p>
+{% endif %}

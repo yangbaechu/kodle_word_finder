@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import generic
+from .models import Word
 
-
-def index(request):
-        return HttpResponse("Hello, world. You're at the polls index.")
+class IndexView(generic.ListView):
+    model = Word   
+    
