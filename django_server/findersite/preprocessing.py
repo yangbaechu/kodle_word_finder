@@ -96,7 +96,7 @@ records.delete()
 word_records = final_words.to_dict('records')
 
 
-model_instances = [Word(word_pieces=record['word_pieces'], word_text=record['word'], frequent=record['ranking'], letter1=['letter1'], letter2=['letter2'], letter3=['letter3'], letter4=['letter4'], letter5=['letter5'], letter6=['letter6']) for record in word_records]
+model_instances = [Word(word_pieces=record['word_pieces'], word_text=record['word'], frequent=record['ranking'], letter1=record['letter1'], letter2=record['letter2'], letter3=record['letter3'], letter4=record['letter4'], letter5=record['letter5'], letter6=record['letter6']) for record in word_records]
 
 Word.objects.bulk_create(model_instances)
 

@@ -1,9 +1,18 @@
+<form action="" method="get">
+    {% csrf_token %}
+    {{ form.as_table}}
+    <input type="submit" value="Submit">
+</form>
+
+<br>
 {% if word_list %}
     <ul>
     {% for word in word_list %}
     <li>{{ word.word_text }}</a></li>
     {% endfor %}
     </ul>
+{% elif not yellow_letters and not gray_letters %}
+    <p> No Words</p>
 {% else %}
-    <p>No Words are available.</p>
+     <p>No Words with {{yellow_letters}} and without {{gray_letters}}are available.</p>
 {% endif %}
