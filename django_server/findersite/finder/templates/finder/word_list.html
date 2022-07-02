@@ -1,7 +1,7 @@
-<form action="" method="get">
+<form action="" method="post">
     {% csrf_token %}
-    {{ form.as_table}}
-    <input type="submit" value="Submit">
+    {{form.as_table}}
+    <input type="submit" value="Submit"/>
 </form>
 
 <br>
