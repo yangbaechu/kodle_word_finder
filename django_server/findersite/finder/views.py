@@ -76,10 +76,10 @@ class IndexView(generic.ListView):
         print(self.yellow, self.gray, self.green)
         word_list = Word.objects.all()
     
-        if self.yellow:
+        if self.yellow[0] != '':
             word_list = Word.objects.yellow_letters(word_list, self.yellow)
         
-        if self.gray:
+        if self.gray[0] != '':
             word_list = Word.objects.gray_letters(word_list, self.gray)
         
         if self.green:

@@ -1,18 +1,52 @@
-<form action="" method="post">
+{% load static %}
+{% load widget_tweaks %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	</head>
+
+<body>
+	<div class="box0">
+		<h1> <center> 꼬들 단어 검색기 </center></h1>
+	</div>
+    <form action="" method="post">
     {% csrf_token %}
-    {{form.as_table}}
-    <input type="submit" value="Submit"/>
+    <div class="text"> <center> 노란색 글자 </center> </div>
+    <div class="box1"> 
+	<center> {{ form.yellow_letters|add_class:"text_input"|attr:"placeholder:콤마로 구분"}}</center>
+    </div>
+    <div class="text"> <center>회색 글자 </center> </div>
+    <div class="box2">
+    	<center>{{ form.gray_letters|add_class:"text_input"|attr:"placeholder:콤마로 구분"}}</center>
+    </div>
+    
+    <div class="text"> <center>초록색 글자 </center> </div>
+    <div class="box3">
+	    <center>
+		{{form.green_letters_1|add_class:"small_text_input"}}
+    		{{form.green_letters_2|add_class:"small_text_input"}}
+   		{{form.green_letters_3|add_class:"small_text_input"}}
+    		{{form.green_letters_4|add_class:"small_text_input"}}
+    		{{form.green_letters_5|add_class:"small_text_input"}}
+    		{{form.green_letters_6|add_class:"small_text_input"}}
+	    </center>
+    </div>
+    <div class="box4">
+	    <center>
+		    <input type="submit" value="검색" style="height: 40px; width:320px;" />
+    	    </center>
+    </div>
 </form>
 
 <br>
 {% if word_list %}
     <ul>
     {% for word in word_list %}
-    <li>{{ word.word_text }}</a></li>
+    <li>{{ word.word_text }}</li>
     {% endfor %}
     </ul>
-{% elif not yellow_letters and not gray_letters %}
-    <p> No Words</p>
 {% else %}
-     <p>No Words with {{yellow_letters}} and without {{gray_letters}}are available.</p>
+    <p> No Words</p>
 {% endif %}
+</body>
+</html>

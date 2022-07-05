@@ -1,0 +1,35 @@
+.box0 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+.box3 {
+	height: 80px;
+}
+
+.text_input {
+	display: inline-block;
+	width: 320px;
+	height: 40px;
+}
+
+.small_text_input {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.input {
+	display = block;
+	width: 320px;
+	hight: 40px;
+}
+
+.text { 
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
