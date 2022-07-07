@@ -52,10 +52,14 @@ class SearchFormView(FormView):
         return super().form_valid(form)
 
 class IndexView(generic.ListView):
-    form_class = SearchWordForm
+    #form_class = SearchWordForm
     gray = []
     yellow = []
     green = []
+    
+    #context 변수 전달, 오버라이딩
+    def get_context_data(self, form=SearchWordForm):
+        return super().get_context_data(form=form)
 
     #기본적으로 데이터 보여주는 함수
     def get_queryset(self):
