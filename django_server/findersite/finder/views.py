@@ -11,7 +11,7 @@ class SearchFormView(FormView):
         
     #입력 받은 변수 검색 
     def form_valid(self, form):
-         
+        print("form is valid") 
         #사용자가 입력한 변수 전달받고 배열로 변경
         yellow = form.cleaned_data['yellow_letters'].split(",")
         gray = form.cleaned_data['gray_letters'].split(",")
@@ -39,6 +39,5 @@ class SearchFormView(FormView):
         context = {'word_list': word_list, 'form':form}
         
         return render(self.request, self.template_name, context)
-
 
 

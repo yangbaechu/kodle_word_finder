@@ -25,10 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-svjbm!a109o_$2@6sie9%uqxma@q4%&7*t!wi&qu4z=kd35j1k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
-ALLOWED_HOSTS = ['3.37.177.34']
+ALLOWED_HOSTS = ['3.37.177.34', 'kordle-word-finder.kro.kr']
 
+#HTTPS setting
+#CSRF_COOKIE_SECURE = True
+
+#SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -41,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'widget_tweaks'
+    'widget_tweaks',
+    'sslserver'
 ]
 
 MIDDLEWARE = [
