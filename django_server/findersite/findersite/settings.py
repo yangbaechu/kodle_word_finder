@@ -22,10 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-svjbm!a109o_$2@6sie9%uqxma@q4%&7*t!wi&qu4z=kd35j1k'
-
+SECRET_KEY = '0&hbuoyxc9__2e7wvh0h-ijwjpy786m6_kq+f^0ri_i^t^25z8'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True 
 
 ALLOWED_HOSTS = ['3.37.177.34', 'kordle-word-finder.kro.kr']
 

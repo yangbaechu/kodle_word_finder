@@ -2,8 +2,6 @@
 {% load widget_tweaks %}
 <html>
 	<head>
-		<meta property="og:url" content="http://kordle-word-finder.kro.kr" />
-		<meta property="og:title" content="꼬들 단어 검색기"/>
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	</head>
 
@@ -47,9 +45,16 @@
     <li>{{ word.word_text }}</li>
     {% endfor %}
     </ul>
-</center>>
+</center>
 {% else %}
 <p> <center>조건에 맞는 단어가 없습니다!</center></p>
+{% endif %}
+{% if plot_div %}
+{% autoescape off %}
+{{ plot_div }}
+{% endautoescape %}
+{% else %}
+<p> 그래프가 없습니다</p>
 {% endif %}
 </body>
 </html>

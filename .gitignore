@@ -2,4 +2,5 @@ venv/
 mynumber14
 mynumber14.pub
 nohup.out
+log.out
 settings.py
